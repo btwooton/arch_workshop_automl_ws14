@@ -7,9 +7,6 @@ After opening the Colab notebook via the link below, please switch the runtime t
 
 <img src="/images/change_colab_runtime.png" width="600" alt="Change Colab Runtime">
 
-### Link to Notebook in Google Colab:
-1. Google Colab Link to Notebook: [Google Colab Link](https://colab.research.google.com/github/expmed/arch_workshop_automl_ws14/blob/main/ws14_hands_on.ipynb)
-
 ## Link to Related Resources and Datasets Used
 
 1. [UCI Machine Learning Repository](https://archive.ics.uci.edu/)
@@ -17,3 +14,54 @@ After opening the Colab notebook via the link below, please switch the runtime t
 3. [Diabetes Readmission Dataset](https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008)
 4. [Drug Reviews Dataset](https://archive.ics.uci.edu/dataset/461/drug+review+dataset+druglib+com)
 5. [AutoGluon Documentation](https://auto.gluon.ai/stable/index.html)
+
+### *Option 1.* Link to Notebook in Google Colab *(preferred)*:
+1. Google Colab Link to Notebook: [Google Colab Link](https://colab.research.google.com/github/expmed/arch_workshop_automl_ws14/blob/main/ws14_hands_on.ipynb)
+
+### *Option 2.* Minimal Local Environment Instructions *(for Workshop Attendees who Want to Run Locally; NOT RECOMMENDED)* 
+
+These steps will help you install Python, set up a Conda environment, and run the workshop notebook locally.
+
+📦 Step 1: Install Anaconda (Recommended)
+Anaconda includes Python, Jupyter, and package management tools in one.
+
+Download and install Anaconda for your operating system:
+
+[Windows / macOS / Linux](https://www.anaconda.com/download)
+
+After installing, open Anaconda Prompt (Windows) or a terminal (Mac/Linux).
+
+📂 Step 2: Clone the Workshop Repository
+If you're using Git:
+
+```bash
+git clone https://github.com/expmed/arch_workshop_automl_ws14.git
+cd arch_workshop_automl_ws14
+```
+Or, download the ZIP from the provided link and extract it. Then navigate into the folder:
+
+```bash
+cd arch_workshop_automl_ws14
+```
+🧪 Step 3: Create and Activate a virtual environment
+
+```bash
+python -m venv workshop_env # Create a virtual environment
+source ./workshop_env/bin/activate # Activate it (if on Mac/Linux)
+workshop_env\Scripts\activate  # Activate it (if on Windows)
+```
+
+🔨 Step 4: Install Required Packages
+Run
+```bash
+pip install -r requirements.txt
+```
+Installing packages will take quite awhile since the `autogluon` package has a lot of dependencies. On our test machine, these dependencies utilize about 2GB of disk space.
+📓 Step 5: Launch the Workshop Jupyter Notebook
+From within your activated python environment and workshop directory:
+
+```bash
+jupyter lab
+```
+Your browser will open automatically. Navigate to the .ipynb files for hands-on exercises.
+You will want to run the `ws14_hands_on_local.ipynb` notebook when running locally 
